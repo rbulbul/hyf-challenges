@@ -1,0 +1,94 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 1200px;
+  font-size: 18px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #5d6063;
+}
+
+a:link,
+a:visited {
+  color: #5d6063;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.header {
+  position: fixed; /* So that the menu bar will be fixed and not moves */
+  display: flex;
+  justify-content: space-between;
+
+  width: 100%;
+  padding: 50px;
+  background-color: #d6e9fe;
+}
+
+/* /* Inline Menu Items */
+
+.menu {
+  margin-top: 15px;
+}
+
+/* We have to use child selectors here */
+/* we only want to select <li> elements that are directly inside the .menu */
+.menu > li {
+  display: inline;
+  margin-right: 50px;
+}
+
+.menu > li:last-of-type {
+  margin-right: 0;
+}
+
+/* Submenu */
+
+.dropdown {
+  position: relative;
+}
+
+/* z-index */
+
+.dropdown > span {
+  z-index: 2;
+  position: relative; /* This is important! It’s required because only positioned elements pay attention to their z-index property */
+  cursor: pointer;
+}
+
+.dropdown:hover .features-menu {
+  display: flex;
+  flex-direction: column;
+  background: #b2d6ff;
+}
+
+.features-menu {
+  z-index: 1;
+  display: none;
+  flex-direction: column;
+  background: #b2d6ff;
+  border-radius: 5px;
+  padding-top: 60px;
+
+  position: absolute;
+  top: -25px;
+  left: -30px;
+}
+
+.features-menu li {
+  list-style: none;
+  border-bottom: 1px solid #fff;
+
+  padding: 0 40px 10px 20px;
+  margin: 10px;
+}
+
+.features-menu li:last-of-type {
+  border-bottom: none;
+}
