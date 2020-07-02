@@ -1,0 +1,238 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #dfb612;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+  margin: 10px 2%;
+  background: linear-gradient(to right, #494964, #6f6f89);
+  background-image: url('https://external-preview.redd.it/2AY4M5leV83yfqgbXNAQ9Oc3YcS8uA9IGsbiDTpw1oI.png?auto=webp&s=bed030c066453e61e26e39cdd23368ef7ba3fad2');
+  background-repeat: no-repeat;
+  /* background-position: center; */
+  border-radius: 10px;
+  filter: drop-shadow(0px 4px 7px #000);
+}
+
+h1 {
+  font-size: 6rem;
+  text-transform: uppercase;
+  filter: drop-shadow(
+    0px 4px 7px #000
+  ); /* That's how you can add shadow to your PNG  */
+  background: #f09433;
+  background: -moz-linear-gradient(
+    45deg,
+    #f09433 0%,
+    #e6683c 25%,
+    #dc2743 50%,
+    #cc2366 75%,
+    #bc1888 100%
+  );
+  background: -webkit-linear-gradient(
+    45deg,
+    #f09433 0%,
+    #e6683c 25%,
+    #dc2743 50%,
+    #cc2366 75%,
+    #bc1888 100%
+  );
+  background: linear-gradient(
+    45deg,
+    #f09433 0%,
+    #e6683c 25%,
+    #dc2743 50%,
+    #cc2366 75%,
+    #bc1888 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888',GradientType=1 );
+  -webkit-background-clip: text; /* clip the background to the text */
+  -webkit-text-fill-color: transparent; /* background color fills up the text color */
+  animation: drop 1.5s ease; /* Name of the animation drop we defined below */
+}
+
+h2 {
+  border-radius: 20px;
+  width: 87%;
+  padding: 10px;
+  font-size: 3rem;
+  text-transform: uppercase;
+  background: linear-gradient(to right, #464545, #232327);
+  -webkit-background-clip: text; /* clip the background to the text */
+  -webkit-text-fill-color: transparent; /* background color fills up the text color */
+}
+
+h2,
+h3,
+p {
+  text-align: center;
+  margin: 20px auto;
+}
+
+/* h2:hover {
+  font-size: 4rem;
+  cursor: pointer;
+} */
+
+.grid-item {
+  margin: 2%;
+  padding: 2%;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+  border-radius: 10px;
+  box-shadow: 15px 10px 20px rgba(37, 36, 36, 0.719);
+}
+
+.grid-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 10px 15px 0px #000;
+}
+
+img {
+  width: 80%;
+  display: block;
+  margin: 5% auto;
+  filter: drop-shadow(0px 4px 7px #000);
+  border-radius: 10px;
+  background-color: #fff;
+}
+
+p {
+  font-size: 1rem;
+}
+
+h3 {
+  border-radius: 20px;
+  color: #fff;
+  /* height: 3rem; */
+  width: 85%;
+  max-width: 445px;
+  padding: 20px 8px;
+  background: linear-gradient(to right, #494964, #6f6f89);
+  font-size: 5vw;
+  overflow: auto;
+}
+
+li {
+  list-style: none;
+}
+
+/* Drop of the Laptop */
+@keyframes drop {
+  /* This is basically the starting value how the animation starts */
+  0% {
+    opacity: 0;
+    transform: translateY(-80px);
+  }
+  /* When the animation finishes */
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 1023px) {
+  #grid-floats .grid-item {
+    float: left;
+    width: 29%;
+    height: 475px;
+  }
+
+  #grid-floats .grid-item:first-child,
+  #grid-floats .grid-item:nth-child(2),
+  #grid-flex .grid-item:first-child,
+  #grid-flex .grid-item:nth-child(2) {
+    width: 45%;
+    height: 450px;
+  }
+
+  .grid-item p {
+    font-size: 12px;
+  }
+
+  .grid-item img {
+    width: 100%;
+    max-width: 314px;
+    margin: 10px auto;
+  }
+
+  .grid-item h3 {
+    width: 100%;
+    font-size: 14px;
+  }
+
+  /* flex  */
+  section {
+    clear: both;
+  }
+
+  #grid-flex {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  #grid-flex h3 {
+    width: 100%;
+    font-size: 14px;
+  }
+
+  #grid-flex li {
+    width: 29%;
+    height: 475px;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  #grid-floats .grid-item {
+    float: left;
+  }
+
+  .grid-item {
+    width: 21%;
+    height: 475px;
+  }
+
+  #grid-floats .grid-item:first-child,
+  #grid-flex .grid-item:first-child {
+    width: 46%;
+    height: 475px;
+  }
+
+  .grid-item p {
+    font-size: 12px;
+  }
+
+  .grid-item img {
+    width: 100%;
+    max-width: 314px;
+    margin: 10px auto;
+  }
+
+  .grid-item h3 {
+    width: 100%;
+    font-size: 14px;
+  }
+
+  /* flex  */
+  section {
+    clear: both;
+  }
+
+  #grid-flex {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+}
