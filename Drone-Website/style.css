@@ -16,7 +16,7 @@ header {
   height: 50vh;
   margin: 10px 2%;
   background: linear-gradient(to right, #494964, #6f6f89);
-  background-image: url('https://external-preview.redd.it/2AY4M5leV83yfqgbXNAQ9Oc3YcS8uA9IGsbiDTpw1oI.png?auto=webp&s=bed030c066453e61e26e39cdd23368ef7ba3fad2');
+  background-image: url('./images/background.png');
   background-repeat: no-repeat;
   /* background-position: center; */
   border-radius: 10px;
