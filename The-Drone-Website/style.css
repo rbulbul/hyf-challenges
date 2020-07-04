@@ -148,6 +148,17 @@ li {
   }
 }
 
+@media only screen and (max-width: 600px) {
+  .grid-item {
+    margin: 5%;
+    padding: 2%;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+    border-radius: 10px;
+    box-shadow: 15px 10px 20px rgba(37, 36, 36, 0.719);
+  }
+}
+
 @media only screen and (min-width: 600px) and (max-width: 1023px) {
   #grid-floats .grid-item {
     float: left;
@@ -208,13 +219,13 @@ li {
 
   .grid-item {
     width: 21%;
-    height: 475px;
+    height: 525px;
   }
 
   #grid-floats .grid-item:first-child,
   #grid-flex .grid-item:first-child {
     width: 46%;
-    height: 475px;
+    height: 525px;
   }
 
   .grid-item p {
@@ -241,6 +252,6 @@ li {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: center;
   }
 }
