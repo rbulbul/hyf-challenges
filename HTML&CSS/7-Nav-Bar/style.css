@@ -1,0 +1,49 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 1200px;
+  font-size: 18px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #5d6063;
+}
+
+a:link,
+a:visited {
+  color: #5d6063;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.header {
+  position: fixed; /* So that the menu bar will be fixed and not moves */
+  display: flex;
+  justify-content: space-between;
+
+  width: 100%;
+  padding: 50px;
+  background-color: #d6e9fe;
+}
+
+/* Inline Menu Items */
+
+.menu {
+  margin-top: 15px;
+}
+
+/* We have to use child selectors here */
+/* we only want to select <li> elements that are directly inside the .menu */
+.menu > li {
+  display: inline;
+  margin-right: 50px;
+}
+
+.menu > li:last-of-type {
+  margin-right: 0em;
+}
